@@ -1,2 +1,2 @@
-# todoist-node
-The unofficial Todoist Node.JS API library
+# todoist-nodejs
+The unofficial Todoist Node.js API library
