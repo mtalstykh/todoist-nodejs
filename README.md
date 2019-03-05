@@ -1,2 +1,2 @@
 # todoist-node
-The unofficial Todoist Python API library
+The unofficial Todoist Node.JS API library
