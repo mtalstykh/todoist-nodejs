@@ -1,0 +1,11 @@
+*sublime*
+.vs_code
+.DS_Store
+.idea
+
+*.log
+*.lock
+*-lock.json
+
+node_modules
+

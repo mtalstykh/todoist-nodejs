@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/mtalstykh/todoist-nodejs.git"
   },
+  "keywords": [
+    "todoist",
+    "api"
+  ],
   "author": {
     "name": "Maksim Talstykh",
     "email": "maksimtalstykh@gmail.com"
@@ -18,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/mtalstykh/todoist-nodejs/issues"
   },
-  "homepage": "https://github.com/mtalstykh/todoist-nodejs#readme"
+  "homepage": "https://github.com/mtalstykh/todoist-nodejs#readme",
+  "dependencies": {}
 }
