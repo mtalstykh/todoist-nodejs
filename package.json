@@ -3,8 +3,8 @@
   "version": "0.0.4",
   "description": "The unofficial Todoist Node.js API library",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "files": [
     "build"
   ],
