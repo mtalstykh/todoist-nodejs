@@ -19,7 +19,8 @@
   },
   "keywords": [
     "todoist",
-    "api"
+    "api",
+    "typescript"
   ],
   "author": {
     "name": "Maksim Talstykh",
@@ -29,8 +30,9 @@
     "url": "https://github.com/mtalstykh/todoist-nodejs/issues"
   },
   "homepage": "https://github.com/mtalstykh/todoist-nodejs#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^11.13.4",
     "typescript": "^3.4.3"
-  },
-  "devDependencies": {}
+  }
 }

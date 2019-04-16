@@ -1,1 +1,5 @@
-console.log("Hello world!");
+export default {
+  sayHello() {
+    console.log("Hello world!");
+  }
+};
