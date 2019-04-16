@@ -2,8 +2,15 @@
   "name": "todoist-nodejs",
   "version": "0.0.2",
   "description": "The unofficial Todoist Node.js API library",
-  "main": "index.js",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "build"
+  ],
   "scripts": {
+    "build": "node run clear && tsc",
+    "clear": "rm -rf build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,10 +25,12 @@
     "name": "Maksim Talstykh",
     "email": "maksimtalstykh@gmail.com"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mtalstykh/todoist-nodejs/issues"
   },
   "homepage": "https://github.com/mtalstykh/todoist-nodejs#readme",
-  "dependencies": {}
+  "dependencies": {
+    "typescript": "^3.4.3"
+  },
+  "devDependencies": {}
 }
