@@ -9,7 +9,7 @@
     "build"
   ],
   "scripts": {
-    "build": "node run clear && tsc",
+    "build": "npm run clear && tsc",
     "clear": "rm -rf build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
