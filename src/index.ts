@@ -2,7 +2,7 @@ require('dotenv').config();
 import * as api from './api'
 
 module.exports = class todoist {
-  data: object = null;
+  state: object = null;
   apiKey: string = null;
 
   constructor(apiKey: string) {
@@ -11,7 +11,7 @@ module.exports = class todoist {
   }
 
   init(): void {
-    return api.sync().then(res => this.data = res.data)
+    return api.sync().then(res => this.state = res.data)
               .catch(err => console.log(err));
   }
 }
