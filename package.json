@@ -30,11 +30,12 @@
     "url": "https://github.com/mtalstykh/todoist-nodejs/issues"
   },
   "homepage": "https://github.com/mtalstykh/todoist-nodejs#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/node": "^11.13.4",
-    "axios": "^0.18.0",
     "dotenv": "^7.0.0",
     "husky": "^1.3.1",
     "typescript": "^3.4.3"
