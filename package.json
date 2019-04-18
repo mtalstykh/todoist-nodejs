@@ -1,6 +1,6 @@
 {
   "name": "todoist-nodejs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The unofficial Todoist Node.js API library",
   "license": "MIT",
   "main": "build/index.js",
