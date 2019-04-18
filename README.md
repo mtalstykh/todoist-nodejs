@@ -7,5 +7,7 @@ The unofficial Todoist Node.js API library
 
 ## Installation
 `npm install node-todoist`
+
 or
+
 `yarn add node-todoist`
