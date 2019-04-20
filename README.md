@@ -4,7 +4,7 @@
 [![Todoist API](https://img.shields.io/badge/todoist%20API-v8-orange.svg)](https://developer.todoist.com/rest/v8/)
 [![npm version](https://badge.fury.io/js/todoist-nodejs.svg)](https://badge.fury.io/js/todoist-nodejs)
 
-The unofficial Todoist Node.js API library
+The unofficial Todoist Node.js API library. Use todoist [SYNC](https://developer.todoist.com/sync/v8/) and [REST](https://developer.todoist.com/rest/v8/) APIs.
 
 ## Installation
 ```
