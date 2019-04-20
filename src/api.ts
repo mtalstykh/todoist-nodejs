@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiEndpoint = "https://todoist.com/api/v7/sync";
+const apiEndpoint = "https://todoist.com/api/v8/sync";
 
 const baseRequest = axios.create({
   baseURL: apiEndpoint,
