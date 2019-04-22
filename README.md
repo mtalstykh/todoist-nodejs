@@ -16,3 +16,6 @@ or
 ```
 yarn add node-todoist
 ```
+## Contributing
+
+Feel free to improve the code and implement new features
