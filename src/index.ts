@@ -1,8 +1,8 @@
 require('dotenv').config();
-import * as api from './api'
+import state from './state';
+import * as api from './request'
 
 module.exports = class todoist {
-  state: object = null;
   apiKey: string = null;
 
   constructor(apiKey: string) {
@@ -11,7 +11,7 @@ module.exports = class todoist {
   }
 
   init(): void {
-    return api.sync().then(res => this.state = res.data)
+    return api.sync().then(res => state.update(res.data))
               .catch(err => console.log(err));
   }
 }
