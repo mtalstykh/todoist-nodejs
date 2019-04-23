@@ -1,4 +1,4 @@
-import { FileAttachment } from './note';
+import AttachmentOptions from './attachment';
 
 export interface ProjectNote {
   "id": number;
@@ -9,7 +9,7 @@ export interface ProjectNote {
   // The content of the note
   "content": string;
   // A file attached to the note
-  "file_attachment": FileAttachment;
+  "file_attachment": AttachmentOptions;
   // A list of user ids to notify
   "uids_to_notify": {
     [index: number]: number
@@ -31,7 +31,7 @@ export interface AddOptions {
   // The content of the note
   "content": string;
   // A file attached to the note
-  "file_attachment"?: FileAttachment;
+  "file_attachment"?: AttachmentOptions;
 }
 
 export interface UpdateOptions {
@@ -39,7 +39,7 @@ export interface UpdateOptions {
   // The content of the note
   "content": string;
   // A file attached to the note
-  "file_attachment"?: FileAttachment;
+  "file_attachment"?: AttachmentOptions;
 }
 
 export interface DeleteOptions {
