@@ -25,11 +25,11 @@ export interface UpdateOptions {
   "id": number;
   "name"?: string;
   // The color id of the label, the value between 30 and 49
-  "color": number;
+  "color"?: number;
   // Label’s order in the label list (a number, where the smallest value should place the label at the top)
-  "item_order": number;
+  "item_order"?: number;
   // Whether the label is favorite (where 1 is true and 0 is false)
-  "is_favorite": number;
+  "is_favorite"?: number;
 }
 
 export interface DeleteOptions {
