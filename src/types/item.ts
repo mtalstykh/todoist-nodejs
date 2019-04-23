@@ -53,7 +53,7 @@ export interface AddOptions {
   // See the Due dates section for more details https://developer.todoist.com/sync/v8/?python#due-dates
   "due"?: Due;
   // The priority of the task (a number between 1 and 4, 4 for very urgent and 1 for natural). 
-  // Note: Keep in mind that very urgent is the priority 1 on clients. So, p1 will return 4 in the API.
+  // Note: Keep in mind that very urgent is the priority 1 on clients. So, p1 will return 4 in the API
   "priority"?: number;
   // The id of the parent task. Set to null for root tasks
   "parent_id"?: number;
@@ -75,7 +75,7 @@ export interface AddOptions {
   // See also the auto_reminder user option for more info about the default reminder at https://developer.todoist.com/sync/v8/?python#user
   "auto_reminder"?: boolean;
   // When this option is enabled, the labels will be parsed from the task content and added to the task. 
-  // In case the label doesn’t exist, a new one will be created.
+  // In case the label doesn’t exist, a new one will be created
   "auto_parse_labels"?: boolean;
 }
 
@@ -87,7 +87,7 @@ export interface UpdateOptions {
   // See the Due dates section for more details https://developer.todoist.com/sync/v8/?python#due-dates
   "due"?: Due;
   // The priority of the task (a number between 1 and 4, 4 for very urgent and 1 for natural). 
-  // Note: Keep in mind that very urgent is the priority 1 on clients. So, p1 will return 4 in the API.
+  // Note: Keep in mind that very urgent is the priority 1 on clients. So, p1 will return 4 in the API
   "priority"?: number;
   // Whether the task’s sub-tasks are collapsed (where 1 is true and 0 is false)
   "collapsed"?: number;
@@ -115,7 +115,7 @@ export interface ReorderOptions {
   [index: number]: {
     "id": number;
     // An array of objects to update. 
-    // Each object contains two attribute: id of the project to update and child_order, the new order.
+    // Each object contains two attribute: id of the project to update and child_order, the new order
     "child_order": number;
   }
 }
@@ -130,7 +130,7 @@ export interface CompleteOptions {
   // If not set, the server will set the value to the current timestamp
   "date_completed"?: Date;
   // When enabled the item is moved to history irregardless of whether it’s a sub-task or not 
-  // (by default only root tasks are moved to history).
+  // (by default only root tasks are moved to history)
   "force_history"?: boolean;
 }
 
@@ -158,7 +158,7 @@ export interface CloseOptions {
 }
 
 export interface UpdateDayOrdersOptions {
-  // A dictionary, where an item id is the key, and the day order its value: item_id: day_order.
+  // A dictionary, where an item id is the key, and the day order its value: item_id: day_order
   "ids_to_order": {
     [item_id: number]: number
   };
