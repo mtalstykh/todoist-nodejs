@@ -52,7 +52,7 @@ export interface DeleteOptions {
 
 
 
-interface FileAttachment {
+export interface FileAttachment {
   "file_name": string;
   // The size of the file in bytes
   "file_size": number;
