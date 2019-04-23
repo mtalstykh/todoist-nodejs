@@ -1,8 +1,9 @@
-require('dotenv').config();
 import state from './state';
 import * as api from './request'
 
-module.exports = class todoist {
+require('dotenv').config();
+
+module.exports = class Todoist {
   apiKey: string = null;
 
   constructor(apiKey: string) {

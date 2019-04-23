@@ -1,4 +1,4 @@
-class state {
+class State {
   full_sync: boolean;
   sync_token: string;
   user: object;
@@ -28,4 +28,4 @@ class state {
   }
 }
 
-export default new state();
+export default new State();
