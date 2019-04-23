@@ -66,7 +66,7 @@ export interface UnarchiveOptions {
 
 export interface ReorderOptions {
   [index: number]: {
-      "id": number;
+    "id": number;
     // The order of project. Defines the position of the task among all the projects with the same parent_id
     "child_order": number;
   }
