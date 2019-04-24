@@ -83,7 +83,7 @@ export interface AddOptions {
 
 export interface QuickAddOptions {
   // The text of the task that is parsed. It can include a due date in free form text,
-  // a project name starting with the # character (without spaces), 
+  // a project name starting with the # character (without spaces),
   // a label starting with the @ character,
   // and an assignee starting with the + character
   'text': string;

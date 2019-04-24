@@ -1,7 +1,7 @@
 export interface Filter {
   'id': number;
   'name': string;
-  // The query to search for. Examples of searches can be found in the Todoist help page 
+  // The query to search for. Examples of searches can be found in the Todoist help page
   // https://get.todoist.help/hc/ru/articles/205248842-Filters
   'query': string;
   // The color id of the filter, the value between 30 and 49
@@ -16,7 +16,7 @@ export interface Filter {
 
 export interface AddOptions {
   'name': string;
-  // The query to search for. Examples of searches can be found in the Todoist help page 
+  // The query to search for. Examples of searches can be found in the Todoist help page
   // https://get.todoist.help/hc/ru/articles/205248842-Filters
   'query': string;
   // The color id of the filter, the value between 30 and 49
@@ -30,7 +30,7 @@ export interface AddOptions {
 export interface UpdateOptions {
   'id': number;
   'name'?: string;
-  // The query to search for. Examples of searches can be found in the Todoist help page 
+  // The query to search for. Examples of searches can be found in the Todoist help page
   // https://get.todoist.help/hc/ru/articles/205248842-Filters
   'query'?: string;
   // The color id of the filter, the value between 30 and 49
