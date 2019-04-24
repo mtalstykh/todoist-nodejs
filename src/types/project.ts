@@ -31,8 +31,18 @@ export interface AddOptions {
   'parent_id'?: number;
   // The order of project. Defines the position of the task among all the projects with the same parent_id
   'child_order'?: number;
-  // Whether the project is favorite (where 1 is true and 0 is false).
+  // Whether the project is favorite (where 1 is true and 0 is false)
   'is_favorite'?: number;
+}
+
+export interface GetInfoOptions {
+  'item_id': number;
+  // Whether to return the notes of the project (a true or false value, while the default is true)
+  'all_data'?: boolean;
+}
+
+export interface GetDataOptions {
+  'project_id': number;
 }
 
 export interface UpdateOptions {
