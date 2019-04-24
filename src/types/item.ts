@@ -81,6 +81,24 @@ export interface AddOptions {
   'auto_parse_labels'?: boolean;
 }
 
+export interface QuickAddOptions {
+  // The text of the task that is parsed. It can include a due date in free form text,
+  // a project name starting with the # character (without spaces), 
+  // a label starting with the @ character,
+  // and an assignee starting with the + character
+  'text': string;
+  // The content of the note
+  'note'?: string;
+  // 	The date of the reminder, added in free form text
+  'reminder'?: string;
+}
+
+export interface GetInfoOptions {
+  'item_id': number;
+  // Whether to return the parent project and notes of the item (a true or false value, while the default is true)
+  'all_data'?: boolean;
+}
+
 export interface UpdateOptions {
   'id': number;
   // The text of the task
