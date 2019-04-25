@@ -37,7 +37,7 @@ export interface Reminder {
   'is_deleted': number;
 }
 
-export interface AddOptions {
+export interface AddReminderOptions {
   // The item id for which the reminder is about
   'item_id': number;
   // The type of the reminder: relative for a time-based reminder specified in minutes from now,
@@ -71,7 +71,7 @@ export interface AddOptions {
   'radius'?: number;
 }
 
-export interface UpdateOptions {
+export interface UpdateReminderOptions {
   'id': number;
   // The user id which should be notified of the reminder,
   // typically the current user id creating the reminder.
@@ -104,7 +104,7 @@ export interface UpdateOptions {
   'radius'?: number;
 }
 
-export interface DeleteOptions {
+export interface DeleteReminderOptions {
   'id': number;
 }
 

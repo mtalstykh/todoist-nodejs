@@ -25,7 +25,7 @@ export interface ProjectNote {
   'reactions': object;
 }
 
-export interface AddOptions {
+export interface AddProjectNoteOptions {
   // The project which the note is part of
   'project_id': number;
   // The content of the note
@@ -34,7 +34,7 @@ export interface AddOptions {
   'file_attachment'?: AttachmentOptions;
 }
 
-export interface UpdateOptions {
+export interface UpdateProjectNoteOptions {
   'id': number;
   // The content of the note
   'content': string;
@@ -42,6 +42,6 @@ export interface UpdateOptions {
   'file_attachment'?: AttachmentOptions;
 }
 
-export interface DeleteOptions {
+export interface DeleteProjectNoteOptions {
   'id': number;
 }

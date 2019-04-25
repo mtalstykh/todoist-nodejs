@@ -1,4 +1,4 @@
-export interface Project {
+export interface ProjectRest {
   'id': number;
   // Project name
   'name': string;
@@ -10,10 +10,10 @@ export interface Project {
   'comment_count': number;
 }
 
-export interface CreateOptions {
+export interface CreateProjectRestOptions {
   'name': string;
 }
 
-export interface UpdateOptions {
+export interface UpdateProjectRestOptions {
   'name': string;
 }

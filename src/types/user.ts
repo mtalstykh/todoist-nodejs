@@ -77,7 +77,7 @@ export interface User {
   'join_date': string;
 }
 
-export interface RegisterOptions {
+export interface RegisterUserOptions {
   'email': string;
   // The user’s real name formatted as Firstname Lastname
   'full_name': string;
@@ -90,12 +90,12 @@ export interface RegisterOptions {
   'timezone'?: string;
 }
 
-export interface DeleteOptions {
+export interface DeleteUserOptions {
   'current_password': string;
   'reason_for_delete'?: string;
 }
 
-export interface UpdateOptions {
+export interface UpdateUserOptions {
   'email'?: string;
   // The user’s real name formatted as Firstname Lastname
   'full_name'?: string;
@@ -126,7 +126,7 @@ export interface UpdateOptions {
   'theme'?: number;
 }
 
-export interface UpdateKarmaGoalsOptions {
+export interface UpdateUserKarmaGoalsOptions {
   'daily_goal'?: number;
   'weekly_goal'?: number;
   // A list with the days of the week to ignore (1 for Monday and 7 for Sunday)
@@ -137,7 +137,7 @@ export interface UpdateKarmaGoalsOptions {
   'karma_disabled'?: number;
 }
 
-export interface UpdateNotificationOptions {
+export interface UpdateUserNotificationOptions {
   // The notification type. For a list of notifications have a look at the Live Notifications section
   'notification_type': string;
   // The service type, which can take the values: email or push
@@ -146,7 +146,7 @@ export interface UpdateNotificationOptions {
   'dont_notify': string;
 }
 
-export interface UpdateSettingsOptions {
+export interface UpdateUserSettingsOptions {
   'reminder_push': boolean;
   'reminder_sms': boolean;
   'reminder_desktop': boolean;

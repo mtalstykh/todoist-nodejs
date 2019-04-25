@@ -9,18 +9,18 @@ export interface Comment {
   'attachment': AttachmentOptions;
 }
 
-export interface GetAllOptions {
+export interface GetAllCommentsOptions {
   'project_id'?: number;
   // or
   'task_id'?: number;
 }
 
-export interface GetAllOptions {
+export interface GetCommentOptions {
   // Comment id
   'id': number;
 }
 
-export interface CreateOptions {
+export interface CreateCommentOptions {
   'project_id'?: number;
   // or
   'task_id'?: number;
@@ -29,13 +29,13 @@ export interface CreateOptions {
   'attachment'?: AttachmentOptions;
 }
 
-export interface UpdatesOptions {
+export interface UpdateCommentOptions {
   // Comment id
   'id': number;
   'content': string;
 }
 
-export interface DeleteOptions {
+export interface DeleteCommentOptions {
   // Comment id
   'id': number;
 }

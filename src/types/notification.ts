@@ -57,17 +57,17 @@ export interface Notification {
   'account_name'?: string;
 }
 
-export interface SetLastKnownOptions {
+export interface SetLastKnownNotificationOptions {
   'id': number;
 }
 
-export interface MarkReadOptions {
+export interface MarkReadNotificationOptions {
   'id': number;
 }
 
 // export interface MarkAllReadOptions {
 // }
 
-export interface MarkUnreadOptions {
+export interface MarkUnreadNotificationOptions {
   'id': number;
 }

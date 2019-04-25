@@ -57,7 +57,7 @@ export interface GetActivityLogOptions {
   'offset'?: number;
 }
 
-export interface FettActivityResponceOptions {
+export interface GetActivityLogResponceOptions {
   // The activity log events
   'events'?: {
     [index: number]: ActivityLogItem;

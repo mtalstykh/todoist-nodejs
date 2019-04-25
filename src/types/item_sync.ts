@@ -45,7 +45,7 @@ export interface Item {
   'date_added': string;
 }
 
-export interface AddOptions {
+export interface AddItemOptions {
   // The text of the task
   'content': string;
   // The id of the project to add the task to (a number or a temp id).
@@ -81,7 +81,7 @@ export interface AddOptions {
   'auto_parse_labels'?: boolean;
 }
 
-export interface QuickAddOptions {
+export interface QuickAddItemOptions {
   // The text of the task that is parsed. It can include a due date in free form text,
   // a project name starting with the # character (without spaces),
   // a label starting with the @ character,
@@ -93,13 +93,13 @@ export interface QuickAddOptions {
   'reminder'?: string;
 }
 
-export interface GetInfoOptions {
+export interface GetItemInfoOptions {
   'item_id': number;
   // Whether to return the parent project and notes of the item (a true or false value, while the default is true)
   'all_data'?: boolean;
 }
 
-export interface UpdateOptions {
+export interface UpdateItemOptions {
   'id': number;
   // The text of the task
   'content'?: string;
@@ -123,7 +123,7 @@ export interface UpdateOptions {
   'day_order'?: number;
 }
 
-export interface MoveOptions {
+export interface MoveItemOptions {
   'id': number;
   // Id of the destination parent task
   'parent_id'?: number;
@@ -131,7 +131,7 @@ export interface MoveOptions {
   'project_id'?: number;
 }
 
-export interface ReorderOptions {
+export interface ReorderItemOptions {
   [index: number]: {
     'id': number;
     // An array of objects to update.
@@ -140,11 +140,11 @@ export interface ReorderOptions {
   };
 }
 
-export interface DeleteOptions {
+export interface DeleteItemOptions {
   'id': number;
 }
 
-export interface CompleteOptions {
+export interface CompleteItemOptions {
   'id': number;
   // 	RFC3339-formatted date of completion of the task (in UTC).
   // If not set, the server will set the value to the current timestamp
@@ -154,30 +154,45 @@ export interface CompleteOptions {
   'force_history'?: boolean;
 }
 
-export interface UncompleteOptions {
+export interface GetAllCompletedOptions {
+  // Filter the tasks by project id
+  'project_id'?: number;
+  // The number of items to return (where the default is 30, and the maximum is 50)
+  'limit'?: number;
+  // Can be used for pagination, when more than the limit number of tasks are returned
+  'offset'?: number;
+  // Return items with a completed date same or older than until (a string value formatted as 2007-4-29T10:13)
+  'until'?: string;
+  // Return items with a completed date newer than since (a string value formatted as 2007-4-29T10:13)
+  'since'?: string;
+  // Return notes together with the completed items (a true or false value)
+  'annotate_notes'?: boolean;
+}
+
+export interface UncompleteItemOptions {
   'id': number;
 }
 
-export interface ArchiveOptions {
+export interface ArchiveItemOptions {
   'id': number;
 }
 
-export interface UnarchiveOptions {
+export interface UnarchiveItemOptions {
   'id': number;
 }
 
-export interface CompleteRecurringOptions {
+export interface CompleteItemRecurringOptions {
   'id': number;
   // The due date of the task.
   // See the Due dates section for more details https://developer.todoist.com/sync/v8/?python#due-dates
   'due'?: Due;
 }
 
-export interface CloseOptions {
+export interface CloseItemOptions {
   'id': number;
 }
 
-export interface UpdateDayOrdersOptions {
+export interface UpdateItemDayOrdersOptions {
   // A dictionary, where an item id is the key, and the day order its value: item_id: day_order
   'ids_to_order': {
     [item_id: number]: number,

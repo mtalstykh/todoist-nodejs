@@ -14,7 +14,7 @@ export interface Filter {
   'is_favorite': number;
 }
 
-export interface AddOptions {
+export interface AddFilterOptions {
   'name': string;
   // The query to search for. Examples of searches can be found in the Todoist help page
   // https://get.todoist.help/hc/ru/articles/205248842-Filters
@@ -27,7 +27,7 @@ export interface AddOptions {
   'is_favorite'?: number;
 }
 
-export interface UpdateOptions {
+export interface UpdateFilterOptions {
   'id': number;
   'name'?: string;
   // The query to search for. Examples of searches can be found in the Todoist help page
@@ -41,11 +41,11 @@ export interface UpdateOptions {
   'is_favorite'?: number;
 }
 
-export interface DeleteOptions {
+export interface DeleteFilterOptions {
   'id': number;
 }
 
-export interface UpdateMultipleOrdersOptions {
+export interface UpdateFilterMultipleOrdersOptions {
   // 	A dictionary, where a filter id is the key, and the order its value: filter_id: order
   'id_order_mappingr': {
     [filter_id: number]: number,

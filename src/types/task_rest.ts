@@ -26,7 +26,7 @@ export interface Task {
   'comment_count': number;
 }
 
-export interface GetAllOptions {
+export interface GetAllTaskOptions {
   // Filter tasks by project id
   'project_id'?: number;
   // Filter tasks by label
@@ -37,11 +37,11 @@ export interface GetAllOptions {
   'lang'?: string;
 }
 
-export interface GetOptions {
+export interface GetTaskOptions {
   'id': number;
 }
 
-export interface CreateOptions {
+export interface CreateTaskOptions {
   // Task content
   'content': string;
   // Task project id. If not set, task is put to user’s Inbox
@@ -66,7 +66,7 @@ export interface CreateOptions {
   'due_lang'?: string;
 }
 
-export interface UpdateOptions {
+export interface UpdateTaskOptions {
   // Task content
   'content': string;
   // Task’s project id (read-only)
@@ -89,13 +89,13 @@ export interface UpdateOptions {
   'due_lang'?: string;
 }
 
-export interface CloseOptions {
+export interface CloseTaskOptions {
   'id': number;
 }
 
-export interface ReopenOptions {
+export interface ReopenTaskOptions {
   'id': number;
 }
-export interface DeleteOptions {
+export interface DeleteTaskOptions {
   'id': number;
 }

@@ -26,7 +26,7 @@ export default interface AttachmentOptions {
   'file_duration'?: number;
 }
 
-export interface GetOptions {
+export interface GetAttachmentOptions {
   // The number of items to return (a number, where the default is 30, and the maximum is 50)
   'limit': number;
   // Can be used for pagination. This should be the minimum upload id you’ve fetched so far.
@@ -34,6 +34,6 @@ export interface GetOptions {
   'last_id': number;
 }
 
-export interface DeleteOptions {
+export interface DeleteAttachmentOptions {
   'file_url': string;
 }

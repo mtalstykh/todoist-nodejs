@@ -1,4 +1,4 @@
-export interface Miscellaneous {
+export interface ProductivityStats {
   // The karma delta on the last update
   'karma_last_update': number;
   // Karma trend. Possible values: up or down
@@ -31,21 +31,6 @@ export interface Miscellaneous {
   // TODO replace type of goals
   //
   'goals': object;
-}
-
-export interface GetAllCompletedOptions {
-  // Filter the tasks by project id
-  'project_id'?: number;
-  // The number of items to return (where the default is 30, and the maximum is 50)
-  'limit'?: number;
-  // Can be used for pagination, when more than the limit number of tasks are returned
-  'offset'?: number;
-  // Return items with a completed date same or older than until (a string value formatted as 2007-4-29T10:13)
-  'until'?: string;
-  // Return items with a completed date newer than since (a string value formatted as 2007-4-29T10:13)
-  'since'?: string;
-  // Return notes together with the completed items (a true or false value)
-  'annotate_notes'?: boolean;
 }
 
 // export interface GetArchivedProjectOptions {

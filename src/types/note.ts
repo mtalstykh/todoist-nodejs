@@ -27,7 +27,7 @@ export interface Note {
   'reactions': object;
 }
 
-export interface AddOptions {
+export interface AddNoteOptions {
   // The item which the note is part of
   'item_id': number;
   // The content of the note
@@ -40,7 +40,7 @@ export interface AddOptions {
   };
 }
 
-export interface UpdateOptions {
+export interface UpdateNoteOptions {
   'id': number;
   // The content of the note
   'content': string;
@@ -48,6 +48,6 @@ export interface UpdateOptions {
   'file_attachment'?: AttachmentOptions;
 }
 
-export interface DeleteOptions {
+export interface DeleteNoteOptions {
   'id': number;
 }

@@ -1,4 +1,4 @@
-export interface Label {
+export interface LabelSync {
   'id': number;
   'name': string;
   // The color id of the label, the value between 30 and 49
@@ -11,7 +11,7 @@ export interface Label {
   'is_favorite': number;
 }
 
-export interface AddOptions {
+export interface AddLabelSyncOptions {
   'name': string;
   // The color id of the label, the value between 30 and 49
   'color'?: number;
@@ -21,7 +21,7 @@ export interface AddOptions {
   'is_favorite'?: number;
 }
 
-export interface UpdateOptions {
+export interface UpdateLabelSyncOptions {
   'id': number;
   'name'?: string;
   // The color id of the label, the value between 30 and 49
@@ -32,11 +32,11 @@ export interface UpdateOptions {
   'is_favorite'?: number;
 }
 
-export interface DeleteOptions {
+export interface DeleteLabelSyncOptions {
   'id': number;
 }
 
-export interface UpdateMultipleOrdersOptions {
+export interface UpdateLabelSyncMultipleOrdersOptions {
   // 	A dictionary, where a label id is the key, and the order its value: label_id: order
   'id_order_mappingr': {
     [label_id: number]: number,

@@ -17,26 +17,26 @@ export interface CollaboratorState {
   'is_deleted': boolean;
 }
 
-export interface ShareOptions {
+export interface ShareCollaboratorOptions {
   'project_id': number;
   'email': string;
 }
 
-export interface DeleteOptions {
+export interface DeleteCollaboratorOptions {
   'project_id': number;
   'email': string;
 }
 
-export interface AcceptInvitationOptions {
+export interface AcceptCollaboratorInvitationOptions {
   'invitation_id': number;
   'invitation_secret': string;
 }
 
-export interface RejectInvitationOptions {
+export interface RejectCollaboratorInvitationOptions {
   'invitation_id': number;
   'invitation_secret': string;
 }
 
-export interface DeleteInvitationOptions {
+export interface DeleteCollaboratorInvitationOptions {
   'invitation_id': number;
 }
