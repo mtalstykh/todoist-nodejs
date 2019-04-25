@@ -9,4 +9,9 @@ export default interface Due {
   'lang'?: string;
   // Boolean flag which is set to true is due object represents a recurring due date
   'is_recurring'?: boolean;
+  //
+  // SPECIAL FOR REST
+  //
+  'datetime'?: string;
+  'recurring'?: boolean;
 }
