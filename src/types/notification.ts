@@ -57,6 +57,20 @@ export interface Notification {
   'account_name'?: string;
 }
 
+export interface LiveNotification {
+  'created': string;
+  'is_deleted': number;
+  'top_procent': number;
+  'completed_tasks': number;
+  'notification_key': string;
+  'notification_type': string;
+  'promo_img': string;
+  'date_reached': string;
+  'karma_level': number;
+  'id': number;
+  'is_unread': number;
+}
+
 export interface SetLastKnownNotificationOptions {
   'id': number;
 }

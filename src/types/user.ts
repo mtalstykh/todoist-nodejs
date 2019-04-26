@@ -77,6 +77,13 @@ export interface User {
   'join_date': string;
 }
 
+export interface UserSettings {
+  'reminder_push': boolean;
+  'reminder_desktop': boolean;
+  'legacy_pricing': boolean;
+  'reminder_email': boolean;
+}
+
 export interface RegisterUserOptions {
   'email': string;
   // The user’s real name formatted as Firstname Lastname
