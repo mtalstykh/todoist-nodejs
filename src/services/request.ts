@@ -4,6 +4,23 @@ import axios from 'axios';
 const syncEndpoint = 'https://todoist.com/api/v8/sync';
 // const restEndpoint = "https://beta.todoist.com/API/v8";
 
+export class API {
+  token: string;
+
+  setToken(token: string) {
+    this.token = token;
+  }
+
+  // TODO replace any type
+  sync(syncToken: string = '*'): any {
+    return baseSyncRequest({
+      data: {
+        syncToken,
+      },
+    });
+  }
+}
+
 const baseSyncRequest = axios.create({
   baseURL: syncEndpoint,
   method: 'post',
@@ -21,10 +38,4 @@ const baseSyncRequest = axios.create({
 //   }
 // });
 
-export const sync = (syncToken: string = '*'):any => {
-  return baseSyncRequest({
-    data: {
-      syncToken,
-    },
-  });
-};
+export default new API();
