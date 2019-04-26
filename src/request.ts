@@ -1,7 +1,7 @@
 import axios from 'axios';
 // import uuid from 'uuid';
 
-const syncEndpoint = "https://todoist.com/api/v8/sync";
+const syncEndpoint = 'https://todoist.com/api/v8/sync';
 // const restEndpoint = "https://beta.todoist.com/API/v8";
 
 const baseSyncRequest = axios.create({
