@@ -15,7 +15,6 @@ module.exports = class Todoist {
 
   constructor(token: string) {
     api.setToken(token);
-    this.sync();
   }
 
   sync(): void {
@@ -24,8 +23,6 @@ module.exports = class Todoist {
     // fetches the latest updated data from the server
     //
     this.stateService.update();
-    // return api.sync().then(res => state.update(res.data))
-    //           .catch(err => console.log(err));
   }
 
   commit(): void {

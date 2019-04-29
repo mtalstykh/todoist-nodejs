@@ -13,22 +13,22 @@ export class API {
 
   // TODO replace any type
   sync(syncToken: string = '*'): any {
-    return baseSyncRequest({
+    return this.baseSyncRequest({
       data: {
         syncToken,
+        token: this.token,
       },
     });
   }
-}
 
-const baseSyncRequest = axios.create({
-  baseURL: syncEndpoint,
-  method: 'post',
-  data: {
-    token: process.env.TOKEN_API,
-    resource_types: ['all'],
-  },
-});
+  baseSyncRequest = axios.create({
+    baseURL: syncEndpoint,
+    method: 'post',
+    data: {
+      resource_types: ['all'],
+    },
+  });
+}
 
 // const baseRestRequest = axios.create({
 //   method: 'post',

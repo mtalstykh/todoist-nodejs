@@ -10,7 +10,7 @@ export class StateService {
     api.sync()
        .then((responce: AxiosResponse) => {
          this.state = responce.data;
-         console.log(this.state);
+         console.log(this.state.user.full_name);
        })
        .catch((err: AxiosError) => console.log(err));
   }
