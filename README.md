@@ -16,6 +16,18 @@ or
 ```
 yarn add node-todoist
 ```
-## Contributing
 
+## Usage
+To get started create new instance of todoist, pass it your API token and make sync to login.
+```
+const todoist = require('todoist-nodejs');
+
+const api = new todoist(<TOKEN_API>);
+api.sync();
+```
+
+## Development
+Clone repo and install dependencies. Create '.env' (.env.example is on the root of the repo). So now you can use examples to test your changes.
+
+## Contributing
 Feel free to improve the code and implement new features.
