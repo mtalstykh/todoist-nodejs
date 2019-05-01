@@ -27,7 +27,18 @@ api.sync();
 ```
 
 ## Development
-Clone repo and install dependencies. Create '.env' (.env.example is on the root of the repo). So now you can use examples to test your changes.
+1. Clone repo and install dependencies.
+```
+npm install
+```
+2. Create '.env' (.env.example is on the root of the repo) and insert your TOKEN_API.
+3. Build it:
+```
+npm run build
+```
+Before every commit it will be rebuilded using pre-commit hook.
+
+4. Use examples to test your changes.
 
 ## Contributing
 Feel free to improve the code and implement new features.
