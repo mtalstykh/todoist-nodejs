@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import uuid from 'uuid';
+// import { uenerateUuid } from '../utils';
 
 const syncEndpoint = 'https://todoist.com/api/v8/sync';
 // const restEndpoint = "https://beta.todoist.com/API/v8";
@@ -34,7 +34,7 @@ export class API {
 //   method: 'post',
 //   headers: {
 //     Authorization: `Bearer ${process.env.TOKEN_API}`,
-//     'X-Request-Id': uuid(),
+//     'X-Request-Id': uenerateUuid(),
 //   }
 // });
 
