@@ -8,7 +8,7 @@ export class ItemsService {
   object_type: string = 'item';
 
   // TODO replace any
-  add(content: any, ...args: any) {
+  add(content: string, args: object) {
     //
     // Creates a local item object
     //
@@ -26,11 +26,14 @@ export class ItemsService {
     obj.data = Object.assign(obj.data, args);
     stateService.state[this.state_name].push(obj);
 
+    if ('id' in obj.data) {
+      delete obj.data['id'];
+    }
     const cmd = {
       type: 'item_add',
       temp_id: obj.temp_id,
       uuid: generateUuid(),
-      args: 2,
+      args: obj.data,
     };
     queueService.push(cmd);
 
