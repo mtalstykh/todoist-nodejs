@@ -4,7 +4,7 @@ import axios from 'axios';
 const syncEndpoint = 'https://todoist.com/api/v8/sync';
 // const restEndpoint = "https://beta.todoist.com/API/v8";
 
-export class API {
+export class ApiService {
   token: string;
 
   setToken(token: string) {
@@ -38,4 +38,4 @@ export class API {
 //   }
 // });
 
-export default new API();
+export default new ApiService();

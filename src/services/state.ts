@@ -1,5 +1,5 @@
 import { State } from '../types/state';
-import api  from './request';
+import api  from './api';
 import { AxiosResponse, AxiosError } from 'axios';
 
 export class StateService {
@@ -15,3 +15,5 @@ export class StateService {
        .catch((err: AxiosError) => console.log(err));
   }
 }
+
+export default new StateService();
