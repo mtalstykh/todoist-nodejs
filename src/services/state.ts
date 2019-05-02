@@ -6,8 +6,8 @@ export class StateService {
   state: State = null;
 
   // TODO Replace any
-  update(): any {
-    api.sync()
+  async update(): Promise<any> {
+    return api.sync()
        .then((responce: AxiosResponse) => {
          this.state = responce.data;
          console.log(this.state.user.full_name);
