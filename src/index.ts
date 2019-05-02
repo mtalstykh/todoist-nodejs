@@ -1,17 +1,16 @@
-import api from './services/request';
+import api from './services/api';
+import stateService from './services/state';
+import queueService from './services/queue';
 import {
   UserService,
-  StateService,
 } from './services';
 
 require('dotenv').config();
 
 module.exports = class Todoist {
-  queue: object[] = [];
 
   // services
-  userManager = new UserService();
-  stateService = new StateService();
+  userService = new UserService();
 
   constructor(token: string) {
     api.setToken(token);
@@ -22,7 +21,7 @@ module.exports = class Todoist {
     // Sends to the server the changes that were made locally, and also
     // fetches the latest updated data from the server
     //
-    this.stateService.update();
+    stateService.update();
   }
 
   commit(): void {
@@ -32,7 +31,7 @@ module.exports = class Todoist {
     // synchronized to the server, unless one of the aforementioned Sync API
     // calls are called directly
     //
-    if (this.queue.length === 0) {
+    if (queueService.length === 0) {
       return;
     }
 
