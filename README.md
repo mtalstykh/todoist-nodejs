@@ -36,7 +36,7 @@ npm install
 ```
 npm run build
 ```
-Before every commit it will be rebuilded using pre-commit hook.
+   Before every commit it will be rebuilded using pre-commit hook.
 
 4. Use examples to test your changes.
 
