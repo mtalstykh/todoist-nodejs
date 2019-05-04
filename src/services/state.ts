@@ -1,6 +1,6 @@
+import { AxiosResponse, AxiosError } from 'axios';
 import { State } from '../types/state';
 import api  from './api';
-import { AxiosResponse, AxiosError } from 'axios';
 
 export class StateService {
   state: State = null;
@@ -10,7 +10,7 @@ export class StateService {
     return api.sync()
        .then((responce: AxiosResponse) => {
          this.state = responce.data;
-         console.log(this.state.user.full_name);
+         console.log(this.state.user);
        })
        .catch((err: AxiosError) => console.log(err));
   }

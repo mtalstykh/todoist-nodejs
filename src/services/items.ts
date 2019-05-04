@@ -12,9 +12,9 @@ export class ItemsService {
     //
     // Creates a local item object
     //
-    const project_id: number = args['project_id'];
+    let project_id: number = args['project_id'];
     if (!project_id) {
-      stateService.state['user']['inbox_project'];
+      project_id = stateService.state.user.inbox_project;
     }
 
     const obj = new ItemModel({

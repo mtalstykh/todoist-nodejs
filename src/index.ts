@@ -20,7 +20,7 @@ module.exports = class Todoist {
     api.setToken(token);
   }
 
-  sync(): Promise<any> {
+  async sync(): Promise<any> {
     //
     // Sends to the server the changes that were made locally, and also
     // fetches the latest updated data from the server
