@@ -8,7 +8,15 @@
       "type": "node",
       "request": "launch",
       "name": "Launch login.js",
-      "program": "${workspaceFolder}\\examples\\login.js"
+      "program": "${workspaceFolder}\\examples\\login.js",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch add_item.js",
+      "program": "${workspaceFolder}\\examples\\add_item.js",
+      "console": "integratedTerminal"
     }
   ]
 }
