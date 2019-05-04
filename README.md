@@ -25,6 +25,19 @@ const todoist = require('todoist-nodejs');
 const api = new todoist(<TOKEN_API>);
 api.sync();
 ```
+After ```sync``` you can do everything you want. Some examples are below.
+
+## Examples
+Performing a ```add item``` request
+```
+api.items.add('task1', 
+              { 
+                 priority: 4,
+                 due: {
+                    string: 'today' 
+                 }
+              }
+```
 
 ## Development
 1. Clone repo and install dependencies.
