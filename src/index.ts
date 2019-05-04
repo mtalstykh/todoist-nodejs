@@ -20,15 +20,15 @@ module.exports = class Todoist {
     api.setToken(token);
   }
 
-  async sync(): Promise<any> {
+  async sync(commands: object[] = null): Promise<any> {
     //
     // Sends to the server the changes that were made locally, and also
     // fetches the latest updated data from the server
     //
-    return stateService.update();
+    return stateService.update(commands);
   }
 
-  commit(): void {
+  async commit(): Promise<any> {
     //
     // Commits all requests that are queued.  Note that, without calling this
     // method none of the changes that are made to the objects are actually
@@ -39,7 +39,7 @@ module.exports = class Todoist {
       return;
     }
 
-    console.log('Piu piu');
+    await this.sync(this.queue.commands);
+    console.log('Commited');
   }
-
 };

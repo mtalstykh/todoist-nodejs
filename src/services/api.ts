@@ -12,10 +12,11 @@ export class ApiService {
   }
 
   // TODO replace any type
-  sync(syncToken: string = '*'): any {
+  sync(commands: object[]): any {
     return this.baseSyncRequest({
       data: {
-        syncToken,
+        commands,
+        syncToken: '*',
         token: this.token,
       },
     });

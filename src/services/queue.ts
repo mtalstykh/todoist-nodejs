@@ -1,12 +1,12 @@
 export class QueueService {
-  state: object[] = [];
+  public commands: object[] = [];
 
   get length():number {
-    return this.state.length;
+    return this.commands.length;
   }
 
   push(obj: object): void {
-    this.state.push(obj);
+    this.commands.push(obj);
   }
 }
 
