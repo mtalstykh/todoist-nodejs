@@ -25,18 +25,37 @@ const todoist = require('todoist-nodejs');
 const api = new todoist(<TOKEN_API>);
 api.sync();
 ```
-After ```sync``` you can do everything you want. Some examples are below.
+After ```sync``` you can do everything you want. Some examples are below. Pay attention, that any changes first of all are placed in queue. So you should call commit method to sync it with todoist servers. 
+```
+api.commit();
+```
 
 ## Examples
 Performing a ```add item``` request
 ```
-api.items.add('task1', 
-              { 
-                 priority: 4,
-                 due: {
-                    string: 'today' 
-                 }
-              }
+const todoist = require('../build/index');
+
+const api = new todoist(process.env.TOKEN_API);
+api.sync()
+   .then(() => api.items.add('task1', 
+                             { 
+                                priority: 4,
+                                due: {
+                                   string: 'today' 
+                                }
+                              }
+   ))
+   .then(() => api.items.add('task2', 
+                             { 
+                                priority: 2,
+                                due: {
+                                   string: 'tomorrow' 
+                                }
+                              }
+   ))
+   .then(
+      () => api.commit()
+    );
 ```
 
 ## Development
