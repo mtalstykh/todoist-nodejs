@@ -45,14 +45,6 @@ api.sync()
                                 }
                               }
    ))
-   .then(() => api.items.add('task2', 
-                             { 
-                                priority: 2,
-                                due: {
-                                   string: 'tomorrow' 
-                                }
-                              }
-   ))
    .then(
       () => api.commit()
     );
