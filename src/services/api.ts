@@ -1,8 +1,8 @@
 import axios from 'axios';
-// import { uenerateUuid } from '../utils';
+import stateService from './state';
+import { State } from 'src/types/state';
 
 const syncEndpoint = 'https://todoist.com/api/v8/sync';
-// const restEndpoint = "https://beta.todoist.com/API/v8";
 
 export class ApiService {
   token: string;
@@ -13,11 +13,15 @@ export class ApiService {
 
   // TODO replace any type
   sync(commands: object[]): any {
+    const state: State = stateService.state;
+
     return this.baseSyncRequest({
       data: {
         commands,
-        syncToken: '*',
         token: this.token,
+        sync_token: state ? state.sync_token : '*',
+        day_orders_timestamp: state ? state.day_orders_timestamp : '',
+        include_notification_settings: 1,
       },
     });
   }
@@ -30,13 +34,5 @@ export class ApiService {
     },
   });
 }
-
-// const baseRestRequest = axios.create({
-//   method: 'post',
-//   headers: {
-//     Authorization: `Bearer ${process.env.TOKEN_API}`,
-//     'X-Request-Id': uenerateUuid(),
-//   }
-// });
 
 export default new ApiService();

@@ -1,12 +1,8 @@
 export class QueueService {
-  public commands: object[] = [];
-
-  get length():number {
-    return this.commands.length;
-  }
+  public queue: object[] = [];
 
   push(obj: object): void {
-    this.commands.push(obj);
+    this.queue.push(obj);
   }
 }
 

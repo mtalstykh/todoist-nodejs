@@ -13,8 +13,8 @@ module.exports = class Todoist {
   // services
   public user = new UserService();
   public items = new ItemsService();
-  public queue = queueService;
-  public state = stateService;
+  public queue = queueService.queue;
+  public state = stateService.state;
 
   constructor(token: string) {
     api.setToken(token);
@@ -25,7 +25,20 @@ module.exports = class Todoist {
     // Sends to the server the changes that were made locally, and also
     // fetches the latest updated data from the server
     //
-    return stateService.update(commands);
+    const responce = await api.sync(commands);
+    if ('temp_id_mapping' in responce) {
+      //
+    }
+
+    console.log(responce.data.user.full_name);
+    stateService.update(responce);
+
+    // await stateService.update(commands);
+    // if (stateService.state.temp_id_mapping) {
+
+    // }
+
+    return responce;
   }
 
   async commit(): Promise<any> {
@@ -35,11 +48,11 @@ module.exports = class Todoist {
     // synchronized to the server, unless one of the aforementioned Sync API
     // calls are called directly
     //
-    if (queueService.length === 0) {
+    if (this.queue.length === 0) {
       return;
     }
 
-    await this.sync(this.queue.commands);
+    await this.sync(this.queue);
     console.log('Commited');
   }
 };

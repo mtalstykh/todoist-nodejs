@@ -5,7 +5,7 @@ import { ItemModel } from '../models';
 
 export class ItemsService {
   state_name: string = 'items';
-  object_type: string = 'item';
+  // object_type: string = 'item';
 
   // TODO replace any
   add(content: string, args: object) {
