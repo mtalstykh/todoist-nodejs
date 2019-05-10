@@ -4,7 +4,7 @@
 [![Todoist API](https://img.shields.io/badge/todoist%20API-v8-orange.svg)](https://developer.todoist.com/rest/v8/)
 [![npm version](https://badge.fury.io/js/todoist-nodejs.svg)](https://badge.fury.io/js/todoist-nodejs)
 
-The unofficial Todoist Node.js API library. Use todoist [SYNC](https://developer.todoist.com/sync/v8/) and [REST](https://developer.todoist.com/rest/v8/) APIs.
+The unofficial Todoist Node.js API library. Use todoist [SYNC](https://developer.todoist.com/sync/v8/) API.
 
 ## Installation
 ```
@@ -33,21 +33,21 @@ api.commit();
 ## Examples
 Performing a ```add item``` request
 ```
-const todoist = require('../build/index');
+const todoist = require("../build/index");
 
 const api = new todoist(process.env.TOKEN_API);
-api.sync()
-   .then(() => api.items.add('task1', 
-                             { 
-                                priority: 4,
-                                due: {
-                                   string: 'today' 
-                                }
-                              }
-   ))
-   .then(
-      () => api.commit()
-    );
+api
+  .sync()
+  .then(() =>
+    api.items.add('task1', {
+      priority: 4,
+      due: {
+        string: 'today'
+      }
+    })
+  )
+  .then(() => api.commit());
+
 ```
 
 ## Development
