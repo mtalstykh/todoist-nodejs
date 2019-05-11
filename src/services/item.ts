@@ -3,7 +3,7 @@ import queueService from './queue';
 import { generateUuid } from '../utils';
 import { ItemModel } from '../models';
 
-export class ItemsService {
+export class ItemService {
   state_name: string = 'items';
   // object_type: string = 'item';
 
