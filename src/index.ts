@@ -3,7 +3,8 @@ import stateService from './services/state';
 import queueService from './services/queue';
 import {
   UserService,
-  ItemsService,
+  ItemService,
+  CollaboratorService,
 } from './services';
 
 require('dotenv').config();
@@ -12,7 +13,8 @@ module.exports = class Todoist {
 
   // services
   public user = new UserService();
-  public items = new ItemsService();
+  public items = new ItemService();
+  public collaborators = new CollaboratorService();
   public queue = queueService.queue;
   public state = stateService.state;
 
@@ -27,16 +29,13 @@ module.exports = class Todoist {
     //
     const responce = await api.sync(commands);
     if ('temp_id_mapping' in responce) {
-      //
+      // TODO
     }
 
     console.log(responce.data.user.full_name);
     stateService.update(responce);
 
-    // await stateService.update(commands);
-    // if (stateService.state.temp_id_mapping) {
-
-    // }
+    // TODO
 
     return responce;
   }
