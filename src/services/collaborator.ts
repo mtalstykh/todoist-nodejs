@@ -5,7 +5,7 @@ export class CollaboratorService {
   state_name = 'collaborators'
   // object_type = None
 
-  delete(projectId: number, email: string) {
+  delete(projectId: number, email: string): void {
     //
     // Deletes a collaborator from a shared project
     //

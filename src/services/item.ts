@@ -1,14 +1,16 @@
+import { ItemModel } from '../models';
 import stateService from './state';
 import queueService from './queue';
 import { generateUuid } from '../utils';
-import { ItemModel } from '../models';
+
+
 
 export class ItemService {
   state_name: string = 'items';
   // object_type: string = 'item';
 
   // TODO replace any
-  add(content: string, args: object) {
+  add(content: string, args: object):any {
     //
     // Creates a local item object
     //
