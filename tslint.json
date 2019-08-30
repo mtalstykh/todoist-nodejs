@@ -4,6 +4,6 @@
     "variable-name": false,
     "max-line-length": false,
     "import-name": false,
-    "no-increment-decrement": false,
+    "no-increment-decrement": false
   }
 }
