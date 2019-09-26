@@ -32,7 +32,6 @@ module.exports = class Todoist {
       // TODO
     }
 
-    console.log(responce.data.user.full_name);
     stateService.update(responce);
 
     // TODO
