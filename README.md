@@ -8,13 +8,13 @@ The unofficial Todoist Node.js API library. Use todoist [SYNC](https://developer
 
 ## Installation
 ```
-npm install node-todoist
+npm install todoist-nodejs
 ```
 
 or
 
 ```
-yarn add node-todoist
+yarn add todoist-nodejs
 ```
 
 ## Usage
